@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fffbf5">
+<title>오늘뭐먹지 AI — 오늘의 메뉴를 가볍게</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="/styles.css"><script src="/app.js" defer></script>
+</head>
+<body><div class="shell">
+<header class="topbar"><a class="brand" href="#"><span class="logo">🍳</span>오늘뭐먹지 <b>AI</b></a><div class="top-actions"><span class="today"><i></i>오늘도 맛있는 하루</span><button id="open-saved" class="saved-trigger">♡ 찜한 메뉴 <b id="saved-count">0</b></button></div></header>
+<main>
+<section class="hero"><div class="eyebrow"><b>YOUR DAILY FOODMATE</b><i></i>매일의 메뉴 고민을 가볍게</div><h1>오늘 뭐 먹을지,<br><em>고민은 AI 셰프에게 맡겨요.</em></h1><p>냉장고 속 재료도, 지금의 기분도 충분한 힌트예요.<br>나에게 딱 맞는 메뉴 세 가지를 골라드릴게요.</p><div class="stamp"><span>오늘의</span><b>한 끼</b><span>추천</span><i>✳</i></div></section>
+<section class="workspace"><div class="form-card"><div class="form-kicker"><span>START WITH WHAT YOU HAVE</span><small><b>01</b> 오늘의 조건</small></div><div class="tabs" role="tablist"><button class="tab active" id="tab-pantry" aria-selected="true">◒ &nbsp;냉장고 파먹기</button><button class="tab" id="tab-out" aria-selected="false">✳ &nbsp;오늘 뭐 먹지?</button></div>
+<section id="pantry-panel" class="panel"><div class="field-title"><div><h2>냉장고에 뭐가 있나요?</h2><p>재료를 입력하거나 아래에서 골라주세요.</p></div><i>A.</i></div><div class="entry"><span class="search">⌕</span><div id="ingredient-tags" class="tags"></div><input id="ingredient-input" maxlength="50" placeholder="예: 계란, 스팸, 김치" aria-label="식재료 입력"><button id="add-ingredient" type="button">Enter ↵</button></div><div class="quick"><small>자주 쓰는 재료</small><div id="quick-picks"></div></div><div class="tools"><div class="field-title compact"><div><h3>사용할 조리 도구</h3><p>가지고 있는 도구를 모두 골라주세요.</p></div><i>B.</i></div><div id="tool-options" class="tool-row"></div></div></section>
+<section id="out-panel" class="panel" hidden><div class="field-title"><div><h2>오늘은 어떤 한 끼가 당기나요?</h2><p>기분과 예산을 골라주면 메뉴를 찾아볼게요.</p></div><i>A.</i></div><div class="choices"><label>지금 내 기분 <small>하나만 선택</small></label><div id="mood-options" class="choice-row"></div></div><div class="choices budget"><label>한 끼 예산 <small>1인 기준</small></label><div id="budget-options" class="choice-row"></div></div></section>
+<div id="form-error" class="form-error" role="alert"></div><button id="recommend-button" class="cta"><span>✧</span> AI 메뉴 추천받기 <i>→</i></button><div class="privacy">✳ 로그인 없이 바로 시작해요 <b></b> 찜한 메뉴는 이 기기에 저장돼요</div></div>
+<aside class="note"><div class="note-kicker">✳ &nbsp; SMALL TIP <i></i></div><blockquote>애매하게 남은 재료도<br>근사한 한 끼가 될 수 있어요.</blockquote><div class="note-foot">당신의 냉장고를 응원해요 <b>♡</b></div><div class="scribble">make it<br>delicious!</div></aside></section>
+<section class="results" id="results-section" aria-live="polite"><div class="result-head"><div><small>TODAY'S MENU IDEAS <b>✳</b></small><h2 id="results-title">오늘의 추천 메뉴</h2></div><span id="results-caption">조건을 입력하면 메뉴를 골라드려요</span></div><div id="results-content"><div class="empty"><div class="plate"><i>✳</i><b>✦</b></div><div><strong>오늘의 메뉴가 여기 도착할 거예요</strong><p>재료나 오늘의 기분을 알려주세요.</p></div><small>GOOD FOOD<br>GOOD MOOD</small></div></div></section>
+</main><footer><b>오늘뭐먹지 AI</b><span>한 끼 고민은 덜고, 맛있는 순간은 더하고.</span><small>MADE FOR YOUR EVERYDAY <i>✳</i></small></footer></div>
+<div id="backdrop" class="backdrop"></div><aside id="drawer" class="drawer" aria-hidden="true"><header><div><small>YOUR LITTLE RECIPE BOX</small><h2>내가 찜한 메뉴 <b id="drawer-count">(0)</b></h2></div><button id="close-saved" aria-label="닫기">×</button></header><div id="drawer-content" class="drawer-content"></div><footer>♡ 마음에 드는 메뉴를 모아두세요</footer></aside><div id="toast" class="toast" role="status"></div>
+</body></html>
